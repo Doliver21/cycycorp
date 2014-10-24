@@ -1,0 +1,33 @@
+
+<html ng-app="app">
+    <head>
+        <title>prueba</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript" src="lib/angular/js/angular.js"></script>
+        <script type="text/javascript" src="EntidadesBancarias.js"></script>
+        <script  type="text/javascript" src="path.jsp"></script>
+    </head>
+    <body ng-controller="EntidadBancariaListController">
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>idEntidad</th>
+                    <th>Nombre</th>
+                    <th>CodigoEntidad</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="entidadBancaria in entidadesBancarias">
+                    <td>{{entidadBancaria.idEntidadBancaria}}</td>
+                    <td>{{entidadBancaria.nombre}}</td>
+                    <td>{{entidadBancaria.codigoEntidad}}</td>
+                    <td><a ng-href="index.html?idEntidadBancaria={{entidadBancaria.idEntidadBancaria}}">Modificar</a></td>
+                </tr>
+            </tbody>
+        </table>
+
+
+
+    </body>
+</html>

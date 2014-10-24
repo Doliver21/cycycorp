@@ -1,0 +1,25 @@
+
+<html ng-app="app">
+    <head>
+        <title>prueba</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript" src="lib/angular/js/angular.js"></script>
+        <script type="text/javascript" src="prueba.js"></script>
+        <script  type="text/javascript" src="path.jsp"></script>
+    </head>
+    <body ng-controller="EntidadBancariaController">
+        <input type="text" ng-model="entidadBancaria.idEntidadBancaria"/><br>
+   
+        <input type=text" ng-model="entidadBancaria.codigoEntidad"/><br>
+   
+        <input type="text" ng-model="entidadBancaria.nombre"/><br>
+    
+     
+   
+        <button ng-click="buscarEntidad(entidadBancaria.idEntidadBancaria)">Buscar Entidad</button>
+        <button ng-click="deleteEntidad(entidadBancaria.idEntidadBancaria)">Borrar Entidad</button>
+        <button ng-click="insertarEntidad(entidadBancaria.idEntidadBancaria,entidadBancaria.codigoEntidad,entidadBancaria.nombre)">Insertar Entidad</button>
+        <button ng-click="modificarEntidad(entidadBancaria.idEntidadBancaria,entidadBancaria.codigoEntidad,entidadBancaria.nombre)">ModificarEntidad</button>
+    </body>
+</html>
